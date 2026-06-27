@@ -58,7 +58,7 @@ export function DataTable<TData, TValue>({
   const [updateProduct] = useUpdateProductMutation();
 
   const newProduct = {
-    name: "Dell XPS 15 9530",
+    name: "Messi with World cup 2026 as Champaign",
     description:
       "Premium ultrabook with a stunning InfinityEdge display, ideal for creative professionals and power users on the go.",
     computerSpec: {
@@ -91,7 +91,7 @@ export function DataTable<TData, TValue>({
       },
     ],
     thumbnail:
-      "https://i.pinimg.com/736x/3d/5e/37/3d5e378c0d827c2dde980c3b7959d056.jpg",
+      "https://i.pinimg.com/236x/90/88/26/9088260cdde30ae1ec3d1662dc370dc8.jpg",
     warranty: "2 years international warranty",
     availability: true,
     images: [

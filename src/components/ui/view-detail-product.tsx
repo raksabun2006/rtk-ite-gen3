@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -20,13 +19,9 @@ type OfferModalData = {
   onOpenChange: (open: boolean) => void;
 };
 
-const ViewProductDetail = ({
-  uuid,
-  open,
-  onOpenChange
-}:OfferModalData) => {
-   console.log("=> uuid:", uuid)
-   const {data:singleProduct} = useGetProductByUuidQuery(uuid);
+const ViewProductDetail = ({ uuid, open, onOpenChange }: OfferModalData) => {
+  console.log("=> uuid:", uuid);
+  const { data: singleProduct } = useGetProductByUuidQuery(uuid);
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
@@ -57,11 +52,11 @@ const ViewProductDetail = ({
             <DialogTitle className="text-center text-3xl font-medium">
               {singleProduct?.name}
             </DialogTitle>
-             <DialogTitle className="text-center text-3xl font-bold text-red-500">
+            <DialogTitle className="text-center text-3xl font-bold text-red-500">
               {singleProduct?.priceOut}$
             </DialogTitle>
           </div>
-         
+
           <DialogFooter>
             <DialogDescription className="text-center text-xs leading-relaxed border-accent-foreground">
               {singleProduct?.description}
